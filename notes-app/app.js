@@ -7,15 +7,15 @@ yargs.version('1.1.0');
 // Create add command
 yargs.command({
   command: 'add',
-  describe: 'Add a new note',
+  describe: 'Ajoutez un nouveau poste',
   builder: {
     title: {
-      describe: 'Note title',
+      describe: 'Titre de l\'article',
       demandOption: true,
       type: 'string',
     },
     body: {
-      describe: 'Note body',
+      describe: 'Contenu de l\'article',
       demandOption: true,
       type: 'string',
     },
@@ -28,10 +28,10 @@ yargs.command({
 // Create remove command
 yargs.command({
   command: 'remove',
-  describe: 'Remove a note',
+  describe: 'Supprimez un article',
   builder: {
     title: {
-      describe: 'Note title',
+      describe: 'Titre de l\'article',
       demandOption: true,
       type: 'string',
     },
@@ -44,7 +44,7 @@ yargs.command({
 // Create list command
 yargs.command({
   command: 'list',
-  describe: 'List your note',
+  describe: 'Liste des articles',
   handler: function () {
     notes.listNotes();
   },
@@ -53,10 +53,10 @@ yargs.command({
 // Create read command
 yargs.command({
   command: 'read',
-  describe: 'Read a note',
+  describe: 'Lire un article',
   builder: {
     title: {
-      describe: 'Note title',
+      describe: 'Titre de l\'article',
       demandOption: true,
       type: 'string',
     },
